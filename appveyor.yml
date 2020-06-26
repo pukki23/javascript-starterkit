@@ -1,0 +1,24 @@
+# Test against the version of node.js
+environment:
+  matrix:
+  # node.js
+    nodejs_version: "6"
+
+# Install scripts. run after repo cloning
+install:
+  # Get the latest version of node.js or io.js
+  - ps: Install-Product node $env:nodejs_version
+  # Install modules
+  - npm install
+
+  # Post install test-scripts
+  test_script:
+    # Output useful info for Debugging
+    - node --version
+    - npm --version
+    # Run tests
+    - npm test
+
+# Do not actually build
+build: off
+

@@ -1,0 +1,6 @@
+// for transpiling using babel
+{
+    "presets": [
+      "latest"
+    ]
+}

@@ -14,6 +14,7 @@ describe('index.html', function(){
 
     //holding the content of the index.html file in memory
     const index = fs.readFileSync('./src/index.html', "utf-8");
+    //const index = fs.readFileSync('./src/index.html', "utf-8");
 
     //create the jsdom enviroment
     jsdom.env(index, function(err, window){
